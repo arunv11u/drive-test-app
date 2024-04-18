@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head -->
+<%- include("layouts/head") %>
+
+	<body>
+		<!-- Navigation-->
+		<%- include('layouts/nav') %>
+
+			<!-- Page Header-->
+			<header class="masthead" style="background-image: url('/assets/img/background.jpg')">
+				<div class="container position-relative px-4 px-lg-5">
+					<div class="row gx-4 gx-lg-5 justify-content-center">
+						<div class="col-md-10 col-lg-8 col-xl-7">
+							<div class="page-heading">
+								<h1>Drive Test Result</h1>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+			<!-- Main Content-->
+			<main class="mb-4">
+				<%- include('layouts/toast') %>
+
+					<div class="container px-4 px-lg-5">
+						<div class="row gx-4 gx-lg-5 justify-content-center">
+							<div class="col-md-10 col-lg-8 col-xl-7">
+								<form id="g-test-form" novalidate>
+									<section>
+										<h3 class="text-center">Personal Details</h3>
+
+										<div class="form-floating">
+											<input class="form-control" id="license-number" type="text"
+												placeholder="License Number" autocomplete="off" disabled />
+											<label for="license-number">License Number</label>
+											<p class="error" id="license-number-error"></p>
+										</div>
+
+										<div class="form-floating">
+											<input class="form-control" id="first-name" type="text"
+												placeholder="First Name" autocomplete="off" disabled />
+											<label for="first-name">First Name</label>
+											<p class="error" id="first-name-error"></p>
+										</div>
+
+										<div class="form-floating">
+											<input class="form-control" id="last-name" type="text"
+												placeholder="Last Name" autocomplete="off" disabled />
+											<label for="last-name">Last Name</label>
+											<p class="error" id="last-name-error"></p>
+										</div>
+
+										<div class="form-floating">
+											<input class="form-control" id="age" type="text" placeholder="Age"
+												autocomplete="off" disabled />
+											<label for="age">Age</label>
+											<p class="error" id="license-number-error"></p>
+										</div>
+
+										<div class="form-floating">
+											<input class="form-control" id="dob" type="date" placeholder="DOB"
+												autocomplete="off" disabled />
+											<label for="dob">DOB</label>
+											<p class="error" id="dob-error"></p>
+										</div>
+									</section>
+
+									<section class="my-5">
+										<h3 class="text-center">Car Details</h3>
+
+										<div class="form-floating">
+											<input class="form-control" id="make" type="text" placeholder="Make"
+												autocomplete="off" disabled/>
+											<label for="make">Make</label>
+											<p class="error" id="make-error"></p>
+										</div>
+
+										<div class="form-floating">
+											<input class="form-control" id="model" type="text" placeholder="Model"
+												autocomplete="off" disabled/>
+											<label for="model">Model</label>
+											<p class="error" id="model-error"></p>
+										</div>
+
+										<div class="form-floating">
+											<input class="form-control" id="year" type="text" placeholder="Year"
+												autocomplete="off" disabled/>
+											<label for="year">Year</label>
+											<p class="error" id="year-error"></p>
+										</div>
+
+										<div class="form-floating">
+											<input class="form-control" id="plate-number" type="text"
+												placeholder="Plate Number" autocomplete="off" disabled/>
+											<label for="plate-number">Plate Number</label>
+											<p class="error" id="plate-number-error"></p>
+										</div>
+									</section>
+
+									<section class="my-5">
+										<h3 class="text-center">Appointment Details</h3>
+
+										<div class="form-floating">
+											<input class="form-control" name="appointment-date" id="appointment-date"
+												type="date" placeholder="Appointment Date" autocomplete="off" disabled/>
+											<label for="appointment-date">Date</label>
+											<p class="error" id="appointment-date-error"></p>
+										</div>
+
+										<div class="form-floating">
+											<input class="form-control" id="appointment-slot" type="text"
+												placeholder="Appointment Slot" autocomplete="off" disabled/>
+											<label for="appointment-slot">Appointment Slot</label>
+											<p class="error" id="appointment-slot-error"></p>
+										</div>
+									</section>
+
+									<section class="my-5">
+										<h3 class="text-center">Update Test Result</h3>
+										<!-- Update Test Result Inputs -->
+										<div class="form-floating mb-3">
+											<select class="form-select" id="exam-result" aria-label="Exam Result" disabled>
+												<option selected disabled>Select Exam Result</option>
+												<option value="Pass">Pass</option>
+												<option value="Fail">Fail</option>
+											</select>
+											<label for="exam-result">Exam Result</label>
+											<p class="error" id="exam-result-error"></p>
+										</div>
+			
+										<div class="form-floating">
+											<textarea class="form-control" placeholder="Comments" id="comments"
+												style="height: 100px;" disabled></textarea>
+											<label for="comments">Comments</label>
+											<p class="error" id="comments-error"></p>
+										</div>
+									</section>
+								</form>
+							</div>
+						</div>
+					</div>
+			</main>
+
+			<!-- Footer-->
+			<%- include('layouts/footer') %>
+
+				<!-- Scripts -->
+				<%- include("layouts/script") %>
+					<script src="/js/admin-view-test-result.script.js"></script>
+	</body>
+
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head -->
+<%- include("layouts/head") %>
+
+	<body>
+		<!-- Navigation-->
+		<%- include('layouts/nav') %>
+
+			<!-- Page Header-->
+			<header class="masthead" style="background-image: url('/assets/img/background.jpg')">
+				<div class="container position-relative px-4 px-lg-5">
+					<div class="row gx-4 gx-lg-5 justify-content-center">
+						<div class="col-md-10 col-lg-8 col-xl-7">
+							<div class="page-heading">
+								<h1>Create Appointment</h1>
+								<!-- <span class="subheading">This is what I do.</span> -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+			<!-- Main Content-->
+			<main class="mb-4">
+				<%- include('layouts/toast') %>
+
+					<div class="container px-4 px-lg-5">
+						<div class="row gx-4 gx-lg-5 justify-content-center">
+							<div class="col-md-10 col-lg-8 col-xl-7">
+								<form id="appointmentForm" novalidate>
+									<section>
+										<h3 class="text-center">Appointment Details</h3>
+
+										<div class="form-floating">
+											<input class="form-control" name="appointment-date" id="appointment-date"
+												type="date" placeholder="Appointment Date" autocomplete="off" />
+											<label for="appointment-date">Date</label>
+											<p class="error" id="appointment-date-error"></p>
+										</div>
+
+										<div class="appointment-slots-wrapper">
+											<label>Select a Appointment Slot</label>
+
+											<div class="appointment-slots">
+												<button type="button"
+													class="btn btn-outline-dark text-uppercase appointment-slot"
+													onclick="pickAppointmentTimeSlot('10:00 AM')" id="slot1">10:00 AM</button>
+												<button type="button"
+													class="btn btn-outline-dark text-uppercase appointment-slot"
+													onclick="pickAppointmentTimeSlot('11:00 AM')" id="slot2">11:00 AM</button>
+												<button type="button"
+													class="btn btn-outline-dark text-uppercase appointment-slot"
+													onclick="pickAppointmentTimeSlot('12:00 PM')" id="slot3">12:00 PM</button>
+												<button type="button"
+													class="btn btn-outline-dark text-uppercase appointment-slot"
+													onclick="pickAppointmentTimeSlot('01:00 PM')" id="slot4">01:00 PM</button>
+												<button type="button"
+													class="btn btn-outline-dark text-uppercase appointment-slot"
+													onclick="pickAppointmentTimeSlot('02:00 PM')" id="slot5">02:00 PM</button>
+												<button type="button"
+													class="btn btn-outline-dark text-uppercase appointment-slot"
+													onclick="pickAppointmentTimeSlot('03:00 PM')" id="slot6">03:00 PM</button>
+												<button type="button"
+													class="btn btn-outline-dark text-uppercase appointment-slot"
+													onclick="pickAppointmentTimeSlot('04:00 PM')" id="slot7">04:00 PM</button>
+												<button type="button"
+													class="btn btn-outline-dark text-uppercase appointment-slot"
+													onclick="pickAppointmentTimeSlot('05:00 PM')" id="slot8">05:00 PM</button>
+												<button type="button"
+													class="btn btn-outline-dark text-uppercase appointment-slot"
+													onclick="pickAppointmentTimeSlot('06:00 PM')" id="slot9">06:00 PM</button>
+											</div>
+
+											<p class="error" id="appointment-slot-error"></p>
+										</div>
+									</section>
+
+									<p class="error" id="error"></p>
+
+									<div class="text-center">
+										<button class="btn btn-primary text-uppercase" id="create-appointment"
+											type="submit">Create</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+			</main>
+
+			<!-- Footer-->
+			<%- include('layouts/footer') %>
+
+				<!-- Scripts -->
+				<%- include("layouts/script") %>
+					<script src="js/appointment-script.js"></script>
+	</body>
+
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Drive Test Results</title>
+	<style>
+		@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+		html {
+			-webkit-print-color-adjust: exact;
+			font-family: "Rubik", sans-serif;
+			padding-top: 5rem;
+		}
+
+		table {
+			width: 100%;
+			border-collapse: collapse;
+		}
+
+		th,
+		td {
+			border: 1px solid #dddddd;
+			text-align: left;
+			padding: 8px;
+		}
+
+		th {
+			background-color: #e0f2ff;
+		}
+
+		.flexBox {
+			display: flex;
+			align-items: center;
+		}
+
+		.logo {
+			width: 170px;
+			height: 100px;
+		}
+
+		.ms-auto {
+			margin-left: auto;
+		}
+
+		.text-end {
+			text-align: right;
+		}
+
+		table {
+			border: 1px solid #dddddd;
+			border-radius: 5px;
+		}
+
+		td {
+			border: none;
+			padding: 10px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="flexBox">
+		<h2>Book Drive Test</h2>
+		<div class="ms-auto text-end">
+			<p>{{today}}</p>
+			<p>Ontario, Canada</p>
+		</div>
+	</div>
+	<h1>Test Results</h1>
+	<table>
+		<thead>
+			<tr>
+				<th>License Number</th>
+				<th>Driver Name</th>
+				<th>Car Plate Number</th>
+				<th>Test Type</th>
+				<th>Exam Result</th>
+			</tr>
+		</thead>
+		<tbody>
+			{{#each results}}
+			<tr>
+				<td>{{user.licenseNumber}}</td>
+				<td>{{user.firstName}} {{user.lastName}}</td>
+				<td>{{user.carDetails.plateNumber}}</td>
+				<td>{{user.testType}}</td>
+				{{#if user.examResult}}
+				<td>{{user.examResult}}</td>
+				{{else}}
+				<td>Pending</td>
+				{{/if}}
+			</tr>
+			{{/each}}
+		</tbody>
+	</table>
+</body>
+
+</html>

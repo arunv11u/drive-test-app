@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head -->
+<%- include("layouts/head") %>
+
+	<body>
+		<!-- Navigation-->
+		<%- include('layouts/nav') %>
+
+			<!-- Page Header-->
+			<header class="masthead" style="background-image: url('/assets/img/background.jpg')">
+				<div class="container position-relative px-4 px-lg-5">
+					<div class="row gx-4 gx-lg-5 justify-content-center">
+						<div class="col-md-10 col-lg-8 col-xl-7">
+							<div class="page-heading">
+								<h1>Login</h1>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+			<!-- Main Content-->
+			<main class="mb-4">
+				<%- include('layouts/toast') %>
+
+					<div class="container px-4 px-lg-5">
+						<div class="row gx-4 gx-lg-5 justify-content-center">
+							<div class="col-md-10 col-lg-8 col-xl-7">
+								<div class="my-5">
+									<form id="loginForm">
+										<div class="form-floating">
+											<input class="form-control" id="username" name="username" type="text"
+												placeholder="Username" autocomplete="off" />
+											<label for="username">Username</label>
+											<p class="error" id="username-error"></p>
+										</div>
+										<div class="form-floating">
+											<input class="form-control" id="password" name="password" type="password"
+												placeholder="Password" autocomplete="off" />
+											<label for="password">Password</label>
+											<p class="error" id="password-error"></p>
+										</div>
+
+										<div class="btn-wrapper text-center">
+											<button class="btn btn-primary text-uppercase" id="login-btn" type="submit">Login</button>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+			</main>
+
+			<!-- Footer-->
+			<%- include('layouts/footer') %>
+
+				<!-- Scripts -->
+				<%- include("layouts/script") %>
+					<script src="js/login-script.js"></script>
+	</body>
+
+</html>
