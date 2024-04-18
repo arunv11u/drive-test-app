@@ -18,7 +18,7 @@ function listen(app) {
 	// Enable trust proxy for secure headers
 	app.enable("trust proxy");
 	// Set security headers middleware
-	app.use(setSecurityHeaders);
+	// app.use(setSecurityHeaders);
 	// Enable CORS with options
 	app.use(cors(corsOptions));
 
